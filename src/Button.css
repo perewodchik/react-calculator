@@ -1,13 +1,16 @@
 @font-face {
-    font-family: calcFont;
-    src: url(font/digits.ttf);
-  }
+    font-family: Roboto;
+    src: url(font/Roboto-Regular.ttf);
+}
 
-.Display {
+.Button {
     box-sizing: border-box;
-    width: 100%;
-    border-radius: 8px;
-    background-color: #DDC5A2;
+    border-radius: 4px;
+    display: table;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 2px solid #301B28;
+
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -17,17 +20,19 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.Display__content {
-    font-family: calcFont;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    max-height: 80px;
-    height: 80px;
+.Button__content {
+    font-family: Roboto;
+    font-size: 56px;
+    display: table-cell;
     vertical-align: middle;
-    font-size: 90px;
-    line-height: 80px;
-    text-align: right;
-    overflow-y: hidden;
-    overflow-x: auto;
+    text-align: center;
+}
+
+.Button:hover {
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.Button:active {
+    background-color: #b6452c86;
+    color: white;
 }
